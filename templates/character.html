@@ -1,0 +1,75 @@
+{% include 'header.html' %}
+{% block content %}
+<style>
+	body {
+		color:azure;
+      }
+</style>
+<div class="green-rect">
+	<div class="blue-rect">
+
+		<h1>{{ char.name }}</h1>
+		<div>
+			<img src={{char.image}} class="img-fluid pad-img" alt="Responsive image" style="margin:10px 0">
+		</div>
+
+		<table class="table">
+		<thead>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Status</th>
+				<td>{{ char.status }}</td>
+			</tr>
+			<tr>
+				<th scope="row">Species</th>
+				<td>{{ char.species }}</td>
+			</tr>
+			<tr>
+				<th scope="row">Type</th>
+				<td>{{ char.type }}</td>
+			</tr>
+			<tr>
+				<th scope="row">Gender</th>
+				<td>{{ char.gender }}</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+<hr>
+
+<div class="container">
+<div class="row" style="text-align: center;">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-4">
+		<a href="/locations/{{char.origin.id}}/" style="color:whitesmoke">
+			<h1>Home World</h1>
+		</a>
+		<p>{{ char.origin.name }}</p>
+		<p>Type: {{ char.origin.type }}</p>
+		<p>Dimension: {{ char.origin.dimension }}</p>
+	</div>
+	<div class="col-sm-4">
+		<a href="/locations/{{char.origin.id}}/" style="color:whitesmoke">
+			<h1>Current Location</h1>
+		</a>
+		<p>{{ char.location.name }}</p>
+		<p>Type: {{ char.location.type }}</p>
+		<p>Dimension: {{ char.location.dimension }}</p>
+	</div>
+	<div class="col-sm-2"></div>
+</div>
+</div>
+
+<hr>
+<h1 class="text-center">Episodes</h1>
+<div id="list-container">
+	<ul style="background-color: #203745;">
+		{% for ep in char.episodes %}
+			<li style="float: none;border-right:none;">{{ep.episode}}: {{ep.name}}</li>
+		{% endfor %}
+	</ul>
+</div>
+<hr>
+{% endblock %}
