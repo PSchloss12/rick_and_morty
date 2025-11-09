@@ -16,7 +16,7 @@ Files of interest:
 - templates: `templates/index.html`, `templates/gallery.html`, `templates/character.html`, `templates/location.html`, `templates/loc_list.html`, `templates/null.html`, `templates/header.html`.
 
 Requirements
-- Python 3.8+ (I'm using 3.10)
+- Python 3.8+ (I'm using 3.12)
 - Internet access for initial population (calls the public API)
 - Packages: Flask, Flask-Bootstrap, Flask-Markdown, SQLAlchemy, requests
 
