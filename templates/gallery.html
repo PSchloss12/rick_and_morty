@@ -1,0 +1,98 @@
+{% include 'header.html' %}
+{% block content %}
+<style>
+	.green-rect {
+	width: 75%;
+	height: 20%;
+	background-color: #bfde42;
+	margin: 0 auto;
+	}
+	a {
+		color: whitesmoke;
+	}
+
+</style>
+
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:#203745;"><span aria-hidden="true">Close</span></button>
+			{{ message }}
+		</div>
+
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+
+<div class="green-rect">
+	<br>
+	<h1 class="text-center">Characters</h1>
+	<div style="text-align:center;">
+		<img src="https://d32qys9a6wm9no.cloudfront.net/images/tvs/backdrop/7a/3e9d7ee64841b1df0ae879c46ee9f5d3_706x397.jpg?t=1636102095" class="img-fluid pad-img" alt="Responsive image" style="margin:10px 0">
+	</div>
+
+	<form method='post' class="form-inline" style="text-align:center; padding:10px;">
+		<div class="form-group mx-sm-3 mb-2">
+		  <label for="char-search" class="sr-only">Search</label>
+		  <input type="text" class="form-control" id="char-search" name="name" placeholder="Search">
+		</div>
+		<button type="submit" class="btn btn-primary mb-2">Search</button>
+	</form>
+	<br>
+</div>
+<br>
+<div style="background-color: #41b4c9;">
+	<br>
+	<div class="container" style="text-align:center;">
+		<form method='get'>
+		<button type="submit" id='reload-page' name='reload-btn' value="reload" class="btn btn-light btn-lg btn-block" style="color:#203745">Randomize</button>
+		</form>
+		<!--<script>
+			document.getElementById('reload-page').addEventListener(
+				'click', function() {location.reload();
+			});
+		</script>
+	-->
+		<br>
+
+		<div class="row">
+			<div class="col-sm-4">
+				{% for c in first_col %}
+				<div class="image-box">
+					<a href="/characters/{{c.id}}/">
+						<img src={{c.image}} class="img-fluid pad-img" alt={{c.name}}>
+						<p>{{c.name}}</p>
+					</a>
+				</div>
+				<br>
+				{% endfor %}
+		  	</div>
+			<div class="col-sm-4">
+				{% for c in second_col %}
+				<div class="image-box">
+					<a href="/characters/{{c.id}}/">
+						<img src={{c.image}} class="img-fluid pad-img" alt={{c.name}}>
+						<p>{{c.name}}</p>
+					</a>
+				</div>
+				<br>
+				{% endfor %}
+		  	</div>
+			<div class="col-sm-4">
+				{% for c in third_col %}
+				<div class="image-box">
+					<a href="/characters/{{c.id}}/">
+						<img src={{c.image}} class="img-fluid pad-img" alt={{c.name}}>
+						<p>{{c.name}}</p>
+					</a>
+				</div>
+				<br>
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+	<br>
+</div>
+{% endblock %}

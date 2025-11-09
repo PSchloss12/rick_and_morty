@@ -1,0 +1,88 @@
+{% include 'header.html' %}
+{% block content %}
+<style>
+	body {
+		color:azure;
+      }
+      a {
+		color: whitesmoke;
+	}
+</style>
+
+<br>
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="green-rect">
+	<div class="blue-rect">
+        <h1>Location:</h1>
+        <h1>{{ location.name }}</h1>
+
+        <table class="table">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Type</th>
+                    <td>{{ location.type }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Dimension</th>
+                    <td>{{ location.dimension }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<br>
+
+<div class="container" style="background-color: #41b4c9;">
+    <div class="row">
+        <br>
+        <div class="col-sm-12">
+            <h1 class="text-center">Characters at this Location</h1>
+        </div>
+        <br>
+    </div>
+    <div class="row" style="text-align:center;">
+        <div class="col-sm-4">
+            {% for c in first_col %}
+            <div class="image-box">
+                <a href="/characters/{{c.id}}/">
+                    <img src={{c.image}} class="img-fluid pad-img" alt={{c.name}}>
+                    <p>{{c.name}}</p>
+                </a>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+        <div class="col-sm-4">
+            {% for c in second_col %}
+            <div class="image-box">
+                <a href="/characters/{{c.id}}/">
+                    <img src={{c.image}} class="img-fluid pad-img" alt={{c.name}}>
+                    <p>{{c.name}}</p>
+                </a>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+        <div class="col-sm-4">
+            {% for c in third_col %}
+            <div class="image-box">
+                <a href="/characters/{{c.id}}/">
+                    <img src={{c.image}} class="img-fluid pad-img" alt={{c.name}}>
+                    <p>{{c.name}}</p>
+                </a>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+
+</div>
+{% endblock %}

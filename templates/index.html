@@ -1,0 +1,45 @@
+{% include 'header.html' %}
+{% block content %}
+<style>
+	body {
+        background-color: #203745;
+		font-family: bradley hand, cursive;
+      }
+	  h1 {
+        font-weight: bold;
+    }
+
+    /* new: make the image row shorter */
+    .short-row img {
+        max-height: 470px;        /* limit height */
+        width: auto;
+        object-fit: cover;        /* crop/fit nicely */
+        margin: 0 0;            /* reduce vertical spacing */
+    }
+    .short-row .col-sm-3 {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+</style>
+<div style="text-align:center; margin: auto;">
+	<img src="https://logos-world.net/wp-content/uploads/2022/01/Rick-And-Morty-Logo.png" class="img-fluid" alt="Responsive image" style="margin:10px 0; max-width:200px;">
+</div>
+
+<div class="container">
+<div class="row short-row">
+		<div class="col-sm-3 text-center">
+			<img src="https://rare-gallery.com/thumbnail/1410511-rick-rick-and-morty-cartoons-tv-shows-hd-animated.jpg" class="img-fluid" alt="Responsive image" style="margin:10px 0">
+		</div>
+		<div class="col-sm-3 text-center">
+			<img src="https://rare-gallery.com/thumbnail/1379770-Rick-Sanchez-Rick-and-Morty-Cartoon-TV-Series-Rick-Sanchez.jpg" class="img-fluid" alt="Responsive image" style="margin:10px 0">
+		</div>
+		<div class="col-sm-3 text-center">
+			<img src="https://rare-gallery.com/thumbnail/1379769-Rick-Sanchez-Silhouette-Rick-and-Morty-Cartoon.jpg" class="img-fluid" alt="Responsive image" style="margin:10px 0">
+		</div>
+		<div class="col-sm-3 text-center">
+			<img src="https://rare-gallery.com/thumbnail/1379782-Evil-Morty-Rick-and-Morty-Cartoon-TV-Series-Rick-Sanchez.jpg" class="img-fluid" style="margin:10px 0">
+		</div>
+	
+</div>
+</div>
+{% endblock %}

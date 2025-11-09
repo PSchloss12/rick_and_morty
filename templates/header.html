@@ -1,0 +1,132 @@
+{% extends 'bootstrap/base.html' %}
+{% block content %}
+<style>
+    h1 {
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+    }
+    h3 {
+      font-family: Arial, sans-serif;
+    }
+    p {
+      font-family: bradley hand, cursive;
+    }
+    body {
+      font-family: bradley hand, cursive;
+      background-color: #203745;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li:last-child {
+      border-right: none;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li p {
+        display: block;
+      color: white;
+      text-align: center;
+      margin: 12px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: #04AA6D;
+    }
+    
+    .green-rect {
+      width: 50%;
+      height: 25%;
+      background-color: #bfde42;
+      margin: 0 auto;
+      padding: 5px;
+    }
+    .blue-rect {
+      width: 100%;
+      height: 100%;
+      background-color: #41b4c9;
+      text-align:center;
+    }
+    .pad-img {
+      max-width: 100%;
+      height: auto;
+      padding: 10px
+    }
+      table {
+      width: 50%;
+    }
+    #list-container {
+      text-align: center;
+    }
+    #list-container ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #list-container ul li {
+      display: block;
+      margin-right: 10px;
+    }
+    tr:nth-child(odd) {
+      background-color: #003b29;
+    }
+    tr:nth-child(even) {
+      background-color: #00333b;
+    }
+    .pad-img {
+      max-width: 100%;
+      height: auto;
+      padding: 10px
+      }
+      .image-box{
+        background-color: #203745;
+        color: whitesmoke;
+        padding: 5px;
+      }
+    </style>
+<html>
+    <!-- head -->
+    <head>
+        <title>Rick, Rick, Rick, Rick</title>
+        <meta name="author" content="Patrick Sclosser">
+        <meta  name="keywords" content="Rick, Morty, tv, fantasy, sci-fi">
+        <meta property="og:image" content="https/:imglink">
+    </head>
+    <!-- body -->
+    <body>
+        <!-- nav bar banner -->
+        <ul>
+            <li><img src="https://files.cults3d.com/uploaders/14307074/illustration-file/3c12b15c-003f-409f-a9b6-b0dcde4495d8/render0001.png" width="30" height="30" class="d-inline-block align-top" alt="" style="margin: 7px;"></li>
+            <li><p style="color:whitesmoke">Rick & Morty</p></li>
+            <li style="float:right"><a href="/locations/">Locations</a></li>
+            <li style="float:right"><a href="/characters/">Characters</a></li>
+            <li style="float:right"><a href="/">Home</a></li>
+        </ul>
+
+        <!-- child data  -->
+
+    </body>
+</html>
+{% endblock %}
