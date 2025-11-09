@@ -1,4 +1,11 @@
-# Rick and Morty (local)
+
+# Programming Paradigms Full Stack Project
+This Flask App uses a SQL database in the background to load in data on the Rick and Morty show. Data was taken from the Rick and Morty API. 
+
+All data is manipulated in OOP fashion using SQLAlchemy, Python, Flask, HTML, and CSS.
+
+git 
+### Running Rick and Morty (local)
 
 Simple Flask app that caches Rick & Morty API data into a local SQLite DB and serves HTML pages from the `templates/` folder.
 
